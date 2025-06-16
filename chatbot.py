@@ -1,0 +1,54 @@
+from flask import Flask, request, jsonify, send_from_directory
+from flask_cors import CORS
+from groq import Groq
+import json
+import os
+
+app = Flask(__name__)
+CORS(app)
+
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")  # ✅ Use environment variable
+client = Groq(api_key=GROQ_API_KEY)
+
+# Load secrets
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+secrets = toml.load(os.path.join(BASE_DIR, "secrets.toml"))
+GROQ_API_KEY = secrets["GROQ_API_KEY"]
+client = Groq(api_key=GROQ_API_KEY)
+
+with open(os.path.join(BASE_DIR, "ai_aether_faq_updated.json"), "r", encoding="utf-8") as f:
+    faq_data = json.load(f)
+faq_context = "\n\n".join([f"Q: {q['question']}\nA: {q['answer']}" for q in faq_data])
+
+@app.route("/chat", methods=["POST"])
+def chat():
+    user_msg = request.json.get("message", "")
+    messages = [
+        {"role": "system", "content": 
+                "You are the official chatbot of AI Aether. "
+                "Answer user questions by referring to the following FAQ data. "
+                "Rephrase answers clearly and professionally without changing their original meaning. "
+                "Keep responses concise and easy to understand.\n\n" + faq_context},
+        {"role": "user", "content": user_msg}
+    ]
+    try:
+        resp = client.chat.completions.create(
+            model="llama-3.3-70b-versatile",
+            messages=messages,
+            temperature=0.5,
+            max_completion_tokens=512,
+            top_p=1,
+        )
+        reply = resp.choices[0].message.content
+    except Exception as e:
+        print("Chat error:", e)
+        reply = "Sorry, something went wrong."
+    return jsonify({"reply": reply})
+
+# Serve your frontend HTML
+@app.route("/chat_interface")
+def chat_interface():
+    return send_from_directory(BASE_DIR, "chat.html")
+
+if __name__ == "__main__":
+    app.run(debug=True)

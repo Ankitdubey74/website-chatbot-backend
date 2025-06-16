@@ -1,0 +1,102 @@
+[
+  {
+    "question": "What does AI Aether do?",
+    "answer": "AI Aether helps businesses build intelligent AI agents, smart websites, and CRM automation tools. We specialize in conversational AI, virtual assistants, and NLP-powered solutions that enhance customer experience."
+  },
+  {
+    "question": "How much does your service cost?",
+    "answer": "We offer affordable plans tailored for startups:\n- **Basic Plan**: ₹4,999/month – 1 chatbot, limited CRM workflows, basic support\n- **Pro Plan**: ₹9,999/month – Up to 3 bots, full CRM integration, analytics, priority support\n- **Enterprise Plan**: Custom quote – Advanced AI agents, APIs, dashboards, and multilingual support"
+  },
+  {
+    "question": "What is included in your Basic Plan?",
+    "answer": "Our Basic Plan includes 1 chatbot, basic analytics, limited CRM workflows, and email support – ideal for small businesses."
+  },
+  {
+    "question": "Can you build a chatbot for my business?",
+    "answer": "Yes! We create custom chatbots tailored to your business goals — including lead capture, customer support, or product discovery."
+  },
+  {
+    "question": "Do you integrate CRM with chatbots?",
+    "answer": "Absolutely. We specialize in CRM automation — from lead capture to follow-ups and workflow integration with tools like HubSpot or custom backends."
+  },
+  {
+    "question": "What platforms can your chatbot run on?",
+    "answer": "Our chatbots can be deployed on websites, WhatsApp, Instagram, and even integrated into mobile apps."
+  },
+  {
+    "question": "Do you support multilingual chatbots?",
+    "answer": "Yes! We support Hindi, English, and regional Indian languages using NLP-powered models for native-like conversations."
+  },
+  {
+    "question": "Can I try your service before paying?",
+    "answer": "We offer a free consultation and demo. If you’re satisfied, you can pick a plan that fits your needs."
+  },
+  {
+    "question": "How can I contact AI Aether?",
+    "answer": "You can reach us at aiaether1@gmail.com or call us on +91 8010036334. Visit our website: https://ai-aether.netlify.app/"
+  },
+  {
+    "question": "Do you offer website development?",
+    "answer": "Yes! We build smart, fast websites that integrate with AI chatbots and CRM systems to automate your customer journey."
+  },
+  {
+    "question": "Can I edit the bot responses later?",
+    "answer": "Yes, we provide editable control panels or setup based on your choice so you can manage FAQs or responses anytime."
+  },
+  {
+    "question": "Do I need technical knowledge to use your services?",
+    "answer": "Nope. We handle everything from setup to support. You just focus on your business while we manage the AI backend."
+  },
+  {
+    "question": "How do I get started?",
+    "answer": "Just drop us a message via Instagram or email us. We’ll schedule a quick discovery call and send you a tailored proposal."
+  },
+  {
+    "question": "Do you work with agencies?",
+    "answer": "Yes, we collaborate with agencies on white-label chatbot and AI automation solutions."
+  },
+  {
+    "question": "Can I cancel anytime?",
+    "answer": "Yes, all plans are flexible. You can upgrade, downgrade, or cancel with one month’s notice."
+  },
+  {
+    "question": "Do you offer chatbot analytics?",
+    "answer": "Yes, our Pro and Enterprise plans include analytics dashboards to track user interactions, engagement, and conversion metrics."
+  },
+  {
+    "question": "How long does it take to build a chatbot?",
+    "answer": "A basic chatbot takes around 3-5 days, while advanced bots with CRM and APIs may take 1-2 weeks depending on complexity."
+  },
+  {
+    "question": "What technology do you use?",
+    "answer": "We use Python, Node.js, LangChain, LLMs like LLaMA, FAISS for vector search, and modern frontend tools for websites and dashboards."
+  },
+  {
+    "question": "Can you integrate WhatsApp bots?",
+    "answer": "Yes, we can deploy AI-powered WhatsApp bots for lead generation, support, and automation using official or Twilio APIs."
+  },
+  {
+    "question": "Do you provide maintenance or updates?",
+    "answer": "Yes. All plans include monthly maintenance, and we offer ongoing updates for bug fixes and enhancements as needed."
+  },
+  {
+    "question": "Do you build AI agents for internal business use?",
+    "answer": "Definitely. We help automate repetitive tasks like ticketing, employee onboarding, and knowledge base queries with internal AI agents."
+  },
+  {
+    "question": "Do you help with chatbot training?",
+    "answer": "Yes. We train your chatbot using FAQs, documents, and real scenarios to ensure accurate responses across different user intents."
+  },
+  {
+    "question": "Can I deploy your chatbot on my existing website?",
+    "answer": "Yes. We’ll provide a lightweight JS snippet or integration steps to add the chatbot to your current website with ease."
+  },
+  {
+    "question": "Is there any free version?",
+    "answer": "We don’t have a completely free plan, but we offer a free demo and discounted pricing for early-stage startups."
+  },
+  {
+    "question": "Can I add payment or lead forms inside the chatbot?",
+    "answer": "Yes, we can embed payment links, lead forms, or schedule bookings right inside the chatbot conversation."
+  }
+]
