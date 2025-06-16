@@ -7,13 +7,12 @@ import os
 app = Flask(__name__)
 CORS(app)
 
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")  # ✅ Use environment variable
+# ✅ Load API key from environment variable
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 client = Groq(api_key=GROQ_API_KEY)
 
-# Load secrets
+# Base directory (optional, if needed later)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-secrets = toml.load(os.path.join(BASE_DIR, "secrets.toml"))
-GROQ_API_KEY = secrets["GROQ_API_KEY"]
 client = Groq(api_key=GROQ_API_KEY)
 
 with open(os.path.join(BASE_DIR, "ai_aether_faq_updated.json"), "r", encoding="utf-8") as f:
