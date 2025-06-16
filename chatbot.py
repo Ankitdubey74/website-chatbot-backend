@@ -26,11 +26,16 @@ def chat():
     print("Received user message:", user_msg)
 
     messages = [
-        {"role": "system", "content":
-            "You are the official chatbot of AI Aether. "
-            "Answer user questions by referring to the following FAQ data. "
-            "Rephrase answers clearly and professionally without changing their original meaning. "
-            "Keep responses concise and easy to understand.\n\n" + faq_context},
+       {
+  "role": "system",
+  "content":
+    "You are the official chatbot of AI Aether. "
+    "Answer user questions by referring to the following FAQ data. "
+    "Rephrase answers clearly and professionally without changing their original meaning. "
+    "Use new lines (\\n), bullet points, or emojis to make answers easy to read. "
+    "Avoid long paragraphs; keep responses concise, helpful, and well-structured.\n\n" + faq_context
+},
+
         {"role": "user", "content": user_msg}
     ]
 
