@@ -23,26 +23,36 @@ faq_context = "\n\n".join([f"Q: {q['question']}\nA: {q['answer']}" for q in faq_
 @app.route("/chat", methods=["POST"])
 def chat():
     user_msg = request.json.get("message", "")
+    print("Received user message:", user_msg)
+
     messages = [
-        {"role": "system", "content": 
+        {"role": "system", "content":
             "You are the official chatbot of AI Aether. "
             "Answer user questions by referring to the following FAQ data. "
             "Rephrase answers clearly and professionally without changing their original meaning. "
             "Keep responses concise and easy to understand.\n\n" + faq_context},
         {"role": "user", "content": user_msg}
     ]
+
     try:
         resp = client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
+            model="llama3-70b-8192",  # ✅ Correct model name
             messages=messages,
             temperature=0.5,
-            max_completion_tokens=512,
+            max_tokens=512,
             top_p=1,
         )
-        reply = resp.choices[0].message.content
+        print("Groq response raw:", resp)
+
+        if not resp.choices:
+            reply = "⚠️ No reply generated. Please try again."
+        else:
+            reply = resp.choices[0].message.content
+
     except Exception as e:
         print("Chat error:", e)
-        reply = "Sorry, something went wrong."
+        reply = "❌ Groq API error: " + str(e)
+
     return jsonify({"reply": reply})
 
 # ✅ Serve chatbot UI
